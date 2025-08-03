@@ -5337,7 +5337,13 @@ function Library:CreateWindow(...)
         Visible = false;
         ZIndex = 1;
         Parent = ScreenGui;
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0, 8)
+        corner.Parent = inst
     });
+    local ucOuter = Instance.new("UICorner")
+    ucOuter.CornerRadius = UDim.new(0, 8)
+    ucOuter.Parent = Outer
     LibraryMainOuterFrame = Outer;
     Library:MakeDraggable(Outer, 25, true);
 
@@ -5353,7 +5359,14 @@ function Library:CreateWindow(...)
         Size = UDim2.new(1, -2, 1, -2);
         ZIndex = 1;
         Parent = Outer;
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0, 8)
+        corner.Parent = inst
     });
+
+    local ucInner = Instance.new("UICorner")
+    ucInner.CornerRadius = UDim.new(0, 8)
+    ucInner.Parent = Inner
 
     Library:AddToRegistry(Inner, {
         BackgroundColor3 = 'MainColor';
@@ -5377,6 +5390,10 @@ function Library:CreateWindow(...)
         ZIndex = 1;
         Parent = Inner;
     });
+
+    local ucSection = Instance.new("UICorner")
+    ucSection.CornerRadius = UDim.new(0, 8)
+    ucSection.Parent = MainSectionOuter
 
     Library:AddToRegistry(MainSectionOuter, {
         BackgroundColor3 = 'BackgroundColor';
