@@ -5358,10 +5358,6 @@ function Library:CreateWindow(...)
         Parent = Outer;
     });
 
-    local ucInner = Instance.new("UICorner")
-    ucInner.CornerRadius = UDim.new(0, 8)
-    ucInner.Parent = Inner
-
     Library:AddToRegistry(Inner, {
         BackgroundColor3 = 'MainColor';
         BorderColor3 = 'AccentColor';
@@ -5384,10 +5380,6 @@ function Library:CreateWindow(...)
         ZIndex = 1;
         Parent = Inner;
     });
-
-    local ucSection = Instance.new("UICorner")
-    ucSection.CornerRadius = UDim.new(0, 8)
-    ucSection.Parent = MainSectionOuter
 
     Library:AddToRegistry(MainSectionOuter, {
         BackgroundColor3 = 'BackgroundColor';
