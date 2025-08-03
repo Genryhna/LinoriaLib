@@ -5337,9 +5337,6 @@ function Library:CreateWindow(...)
         Visible = false;
         ZIndex = 1;
         Parent = ScreenGui;
-        local corner = Instance.new("UICorner")
-        corner.CornerRadius = UDim.new(0, 8)
-        corner.Parent = inst
     });
     local ucOuter = Instance.new("UICorner")
     ucOuter.CornerRadius = UDim.new(0, 8)
@@ -5359,9 +5356,6 @@ function Library:CreateWindow(...)
         Size = UDim2.new(1, -2, 1, -2);
         ZIndex = 1;
         Parent = Outer;
-        local corner = Instance.new("UICorner")
-        corner.CornerRadius = UDim.new(0, 8)
-        corner.Parent = inst
     });
 
     local ucInner = Instance.new("UICorner")
