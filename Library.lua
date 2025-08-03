@@ -5338,9 +5338,6 @@ function Library:CreateWindow(...)
         ZIndex = 1;
         Parent = ScreenGui;
     });
-    local ucOuter = Instance.new("UICorner")
-    ucOuter.CornerRadius = UDim.new(0, 8)
-    ucOuter.Parent = Outer
     LibraryMainOuterFrame = Outer;
     Library:MakeDraggable(Outer, 25, true);
 
